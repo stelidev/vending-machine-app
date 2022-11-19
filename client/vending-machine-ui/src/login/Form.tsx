@@ -28,6 +28,7 @@ const LoginForm = () => {
                         <TextField
                             label="Password"
                             placeholder="Password"
+                            type="password"
                             {...register("password", { required: true })}
                             error={errors.password !== undefined}
                             helperText={errors.password?.message !== undefined ? "This field is required" : ""}

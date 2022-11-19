@@ -1,10 +1,10 @@
 import { Card, Grid, TextField, Button, Typography, CircularProgress, Box } from "@mui/material";
 import { marginTop, card, formContainer } from "../Form.styles";
 import RegisterForm from "./Form";
+import { Link } from "react-router-dom";
 
 
 const Register = () => {
-
     const loading = false;
 
     if(loading){
@@ -23,7 +23,7 @@ const Register = () => {
             <Box sx={formContainer}>
                 <RegisterForm />
                 <Typography fontSize={14} align="left" sx={marginTop}>
-                    Already have an account? Click here to login
+                    Already have an account? <Link to="/login">Click here to login</Link>
                 </Typography>
             </Box>
         </Card>

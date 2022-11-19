@@ -54,6 +54,7 @@ const RegisterForm = () => {
                         <TextField
                             label="Password"
                             placeholder="Password"
+                            type="password"
                             {...register("password", { required: true })}
                             error={errors.password !== undefined}
                             helperText={errors.password?.message !== undefined ? "This field is required" : ""}
@@ -65,6 +66,7 @@ const RegisterForm = () => {
                         <TextField
                             label="Confirm password"
                             placeholder="Confirm password"
+                            type="password"
                             {...register("passwordConfirmation", { required: true })}
                             error={errors.password !== undefined}
                             helperText={errors.password?.message !== undefined ? "This field is required" : ""}

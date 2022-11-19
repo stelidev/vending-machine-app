@@ -30,7 +30,7 @@ const Login = () => {
             <Box sx={formContainer}>
                 <LoginForm />
                 <Typography fontSize={14} align="left" sx={marginTop}>
-                    Need to register? Click here
+                    Need to register? <Link to="/register"> Click here</Link>
                 </Typography>
             </Box>
        </Card>
