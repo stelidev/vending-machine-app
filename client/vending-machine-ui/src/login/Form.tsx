@@ -1,6 +1,6 @@
-import { Box, Button, Grid, TextField } from "@mui/material";
+import { Box, Button, FormControl, Grid, TextField } from "@mui/material";
 import { useForm } from "react-hook-form";
-import { field, fieldBox } from "./Login.styles";
+import { field, fieldBox } from "../Form.styles";
 
 const LoginForm = () => {
     const { register, handleSubmit, formState: {errors}} = useForm();
@@ -13,22 +13,26 @@ const LoginForm = () => {
             <Box>
                 <form id="login-form" onSubmit={handleSubmit(onSubmit)}>
                 <Box>
-                    <TextField
-                        sx={field}
-                        placeholder="Username"
-                        {...register("username", { required: true })}
-                        error={errors.username !== undefined}
-                        helperText={errors.username?.message !== undefined ? "This field is required" : ""}
-                    />
+                    <FormControl fullWidth>
+                        <TextField
+                            label="Username"
+                            placeholder="Username"
+                            {...register("username", { required: true })}
+                            error={errors.username !== undefined}
+                            helperText={errors.username?.message !== undefined ? "This field is required" : ""}
+                        />
+                    </FormControl>
                 </Box>
                 <Box sx={fieldBox}>
-                    <TextField
-                        sx={field}
-                        placeholder="Password"
-                        {...register("password", { required: true })}
-                        error={errors.password !== undefined}
-                        helperText={errors.password?.message !== undefined ? "This field is required" : ""}
-                    />
+                    <FormControl fullWidth>
+                        <TextField
+                            label="Password"
+                            placeholder="Password"
+                            {...register("password", { required: true })}
+                            error={errors.password !== undefined}
+                            helperText={errors.password?.message !== undefined ? "This field is required" : ""}
+                        />
+                    </FormControl>
                 </Box>
                 <Box sx={fieldBox}>
                     <Button type="submit" sx={field} variant="contained">Login</Button>
