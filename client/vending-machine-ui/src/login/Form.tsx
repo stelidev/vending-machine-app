@@ -17,12 +17,14 @@ const LoginForm = () => {
                     <TextField
                         sx={field}
                         placeholder="Username"
+                        {...register("username")}
                     />
                 </Box>
                 <Box sx={fieldBox}>
                     <TextField
                         sx={field}
                         placeholder="Password"
+                        {...register("password")}
                     />
                 </Box>
 
