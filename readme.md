@@ -1,1 +1,1 @@
-Init
+Readme file initialisation
